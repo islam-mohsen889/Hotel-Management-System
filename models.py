@@ -13,6 +13,9 @@ class Person:
 
     def get_contact(self):
         return self.contact_info
+        
+    def set_contact(self, new_contact_info):
+        self.contact_info = new_contact_info
 
     def display_info(self):
         print("ID:", self.person_id)
