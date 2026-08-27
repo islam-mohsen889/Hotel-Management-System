@@ -44,7 +44,7 @@ class HotelSystem:
             res.guest.add_reservation(res)  # added reservation to guest
             print(f"Reservation created successfully for Guest: {res.guest.get_name()}.")
         else:
-            print(f"Room {res.room.get_room_number()} is\'t available.\n You can book from these : ")
+            print(f"Room {res.room.get_room_number()} isn't available.\n You can book from these : ")
             self.displayAvailableRooms()
 
     def cancelReservation(self, res):
