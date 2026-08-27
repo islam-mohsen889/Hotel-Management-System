@@ -64,13 +64,13 @@ class HotelSystem:
         print(f'Guest: {guestName} not found.')
         return None
 
-        def searchRoom(self, room_number):
+    def searchRoom(self, room_number):
         for room in self.rooms:
             if room.get_room_number() == room_number:
                 print(f"Room found: {room}")
                 return room
-        print(f"Room {room_number} not found.")
-        return None
+            print(f"Room {room_number} not found.")
+            return None
 
     def updateGuestContact(self, guest_id, new_contact_info):
         for guest in self.guests:

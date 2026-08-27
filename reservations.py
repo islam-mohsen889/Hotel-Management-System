@@ -42,8 +42,8 @@ class Reservation:
        print("Guest:", self.guest.get_name())
        print("Room:", self.room.get_room_number())
        print("Room Type:", self.room.get_room_type())
-       print("Check-in:", self.check_in.strftime("%Y-%m-%d"))
-       print("Check-out:", self.check_out.strftime("%Y-%m-%d"))
+       print("Check-in:", self.check_in_date.strftime("%Y-%m-%d"))
+       print("Check-out:", self.check_out_date.strftime("%Y-%m-%d"))
        print("Status:", self.status)
        print("Total Cost:", self.calculate_total_price())
 
