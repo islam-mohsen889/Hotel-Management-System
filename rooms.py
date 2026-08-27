@@ -26,6 +26,14 @@ class Room:
 
     def is_available(self):
         return self._is_available
+        
+    # ---------- Setters (Update feature) ----------
+    def set_price_per_night(self, new_price):
+        self._price_per_night = new_price
+ 
+    def set_room_type(self, new_type):
+        self._room_type = new_type
+ 
 
     # ---------- Behaviour ----------
     def mark_as_booked(self):
