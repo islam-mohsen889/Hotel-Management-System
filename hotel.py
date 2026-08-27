@@ -64,6 +64,30 @@ class HotelSystem:
         print(f'Guest: {guestName} not found.')
         return None
 
+        def searchRoom(self, room_number):
+        for room in self.rooms:
+            if room.get_room_number() == room_number:
+                print(f"Room found: {room}")
+                return room
+        print(f"Room {room_number} not found.")
+        return None
+
+    def updateGuestContact(self, guest_id, new_contact_info):
+        for guest in self.guests:
+            if guest.get_id() == guest_id:
+                guest.set_contact(new_contact_info)
+                print(f"Guest {guest.get_name()}'s contact info updated to {new_contact_info}.")
+                return
+        print(f"Guest with ID {guest_id} not found.")
+
+    def updateRoomPrice(self, room_number, new_price):
+        for room in self.rooms:
+            if room.get_room_number() == room_number:
+                room.set_price_per_night(new_price)
+                print(f"Room {room_number} price updated to {new_price}.")
+                return
+        print(f"Room {room_number} not found.")
+
     def addPayment(self, payment):
         self.payments.append(payment)
         print("Payment recorded successfully.")
